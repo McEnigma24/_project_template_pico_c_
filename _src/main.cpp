@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[])
 {
-    cout << "działa" << endl;
+    cout << "działaaaaaa" << endl;
     
     return 0;
 }
