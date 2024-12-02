@@ -11,3 +11,5 @@ using namespace std;
 #define line(x) cout << x << '\n';
 #define linee(x) cout << x << ' ';
 #define nline cout << '\n';
+
+int my_sum(int a, int b);
