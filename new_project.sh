@@ -4,7 +4,7 @@ if [ "$(basename "`pwd`")" == "_project_template_" ]; then
 
     if [ -n "$1" ]; then
         mkdir ../$1
-        cp -r * ../$1
+        cp -ra . ../$1
         cd ../$1
         chmod +x scripts/*.sh
         chmod +x start.sh
