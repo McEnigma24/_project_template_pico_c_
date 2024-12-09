@@ -46,5 +46,5 @@ git remote set-url origin git@github.com:$user_name/$repo_name.git
 git branch -M main
 git push -u origin main
 
-rm -f "$0"
-./push.sh
+# rm -f "$0"
+# ./push.sh
