@@ -2,6 +2,7 @@
 
 var_start=""
 var_end=""
+dir_input="input"
 dir_build="build"
 dir_exe="exe"
 dir_log="log"
@@ -27,6 +28,7 @@ timer_print()
 }
 env_prep()
 {
+    create_dir "$dir_input"
     create_dir "$dir_build"
     create_dir "$dir_exe"
     create_dir "$dir_log"
