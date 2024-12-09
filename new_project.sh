@@ -8,6 +8,7 @@ if [ "$(basename "`pwd`")" == "_project_template_" ]; then
         cd ../$1
         chmod +x scripts/*.sh
         chmod +x start.sh
+        rm -rf .git
         rm -rf build/*
         rm -rf exe/*
         rm -rf log/*
