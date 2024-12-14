@@ -15,3 +15,8 @@ using namespace std;
 #define nline cout << '\n';
 
 int my_sum(int a, int b);
+
+typedef uint8_t u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
