@@ -14,6 +14,35 @@ using namespace std;
 #define linee(x) cout << x << ' ';
 #define nline cout << '\n';
 
+namespace vec_utils{
+
+    template <typename T>
+    void print_on_by_one(const std::vector<T>& vec)
+    {
+        for(auto& v : vec)
+        {
+            cout << v << "\n";
+        }
+    }
+
+    template <typename T>
+    bool contains(const T& value, const std::vector<T>& vec)
+    {
+        return std::find(vec.begin(), vec.end(), value) != vec.end();
+    }
+
+    template <typename T>
+    void remove_by_value(const T& value, std::vector<T>& vec)
+    {
+        auto it = std::find(vec.begin(), vec.end(), value);
+
+        if (it != vec.end())
+        {
+            vec.erase(it);
+        }
+    }
+}
+
 int my_sum(int a, int b);
 
 typedef uint8_t u8;
