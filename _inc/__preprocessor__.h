@@ -55,6 +55,7 @@ typedef uint64_t u64;
 #define base_0(x) (x - 1)
 
 #define c_init(x) x(_##x)
+#define cc_init(x) this->x = x;
 #define member_assign(a, b, member) a.member = b.member;
 #define THIS_OTHER(x) this->x = other.x;
 
