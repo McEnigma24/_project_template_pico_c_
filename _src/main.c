@@ -27,7 +27,7 @@ void pico_set_led(bool led_on)
 #endif
 }
 
-#define my_time 1000
+#define my_time 100
 
 int main()
 {
