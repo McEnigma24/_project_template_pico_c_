@@ -6,9 +6,13 @@ dir_input="input"
 dir_build="build"
 dir_exe="exe"
 dir_log="log"
-dir_run_time_config="run_time_config"
+
 SCRIPT="./production.sh"
 LOG="../output/start.log"
+
+dir_run_time_config="run_time_config"
+path_DONE_installed="${dir_run_time_config}/DONE_installed.txt"
+
 
 silent_come_back() { cd - > /dev/null; }
 
@@ -34,6 +38,8 @@ timer_print()
 }
 install_packages()
 {
+    if [ -f $path_DONE_installed ]; then return; fi
+
     # Funkcja sprawdzająca czy pakiet jest zainstalowany
     check_and_install()
     {
@@ -77,6 +83,7 @@ install_packages()
 
     echo -ne "\n\n"
     echo "Instalation completed"
+    echo "DONE" > $path_DONE_installed
     echo -ne "\n\n"
 }
 pico_env_prep()
@@ -85,7 +92,7 @@ pico_env_prep()
     export PICOTOOL_FETCH_FROM_GIT_PATH=/home/womackow/pico_projects/pico-sdk
 
     cd ../pico-sdk
-    git submodule update --init
+    git submodule update --init --recursive
     silent_come_back;
 }
 env_prep()
